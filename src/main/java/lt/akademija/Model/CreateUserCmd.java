@@ -12,6 +12,7 @@ public abstract class CreateUserCmd {
 	private String companyName;
 	private String personalId;
 	private String dateOfBirth;
+	private String doctorUsername;
 	
 	
 	
@@ -45,9 +46,7 @@ public abstract class CreateUserCmd {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public String getName() {
-		return name;
-	}
+	public String getName() { return name; }
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -75,5 +74,7 @@ public abstract class CreateUserCmd {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
+	public String getDoctorUsername() {return doctorUsername;}
+	public void setDoctorUsername(String doctorUsername) {this.doctorUsername = doctorUsername;}
 
 }

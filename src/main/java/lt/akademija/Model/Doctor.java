@@ -4,8 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.List;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -14,12 +20,26 @@ public class Doctor extends User {
 	@Id
     @GeneratedValue(strategy = GenerationType.TABLE)
 	private Long id;
+    @NotNull
+    @Size(min=3, max=20)
+    @Pattern(regexp ="[a-zA-Z]+")
 	private String name;
+    @NotNull
+    @Size(min=3, max=20)
+    @Pattern(regexp ="[a-zA-Z]+")
 	private String surname;
+    @NotNull
+    @Size(min=3, max=20)
+    @Pattern(regexp = "\\w+")
 	private String username;
+    @NotNull
+    @Size(min=6, max=30)
 	private String password;
 	private boolean enabled = true;
+    @NotNull
+    @Size(min=3, max=30)
 	private String specialisation;
+
 	public Long getId() {
 		return id;
 	}
