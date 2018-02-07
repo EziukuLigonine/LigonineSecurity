@@ -1,25 +1,21 @@
 package lt.akademija.Model;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Patient extends User {
-
+public class Pharmacist extends User{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
-
     @NotNull
     @Size(min=3, max=20)
     @Pattern(regexp ="[a-zA-Z]+")
@@ -30,11 +26,12 @@ public class Patient extends User {
     private String surname;
     @NotNull
     @Size(min=3, max=20)
-    private String birthday;
-    @NotNull
-    @Size(min=11, max=11)
     @Pattern(regexp = "\\w")
-    private String personalId;
+    private String companyType;
+    @NotNull
+    @Size(min=3, max=20)
+    @Pattern(regexp = "\\w")
+    private String companyName;
     @NotNull
     @Size(min=3, max=20)
     @Pattern(regexp = "\\w")
@@ -43,9 +40,6 @@ public class Patient extends User {
     @Size(min=6, max=20)
     private String password;
     private boolean enabled = true;
-    private String doctorUsername;
-    @ManyToOne
-    private Doctor doctor;
 
     public Long getId() {
         return id;
@@ -54,7 +48,6 @@ public class Patient extends User {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getName() {
         return name;
@@ -72,20 +65,20 @@ public class Patient extends User {
         this.surname = surname;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public String getCompanyType() {
+        return companyType;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setCompanyType(String companyType) {
+        this.companyType = companyType;
     }
 
-    public String getPersonalId() {
-        return personalId;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setPersonalId(String personalId) {
-        this.personalId = personalId;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getUsername() {
@@ -103,6 +96,7 @@ public class Patient extends User {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public boolean isEnabled() {
         return enabled;
     }
@@ -111,17 +105,10 @@ public class Patient extends User {
         this.enabled = enabled;
     }
 
-    public String getDoctorUsername() {
-        return doctorUsername;
-    }
-
-    public void setDoctorUsername(String doctorUsername) {
-        this.doctorUsername = doctorUsername;
-    }
-
     @Override
     public String toString() {
         return String.valueOf(id);
     }
+
 
 }

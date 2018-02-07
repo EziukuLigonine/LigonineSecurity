@@ -59,6 +59,15 @@ public class CreatePatientCmd extends CreateUserCmd {
         public void setPassword(String password) {
             this.password = password;
         }
+        public boolean isEnabled() {
+
+            return enabled;
+        }
+
+        public void setEnabled(boolean enabled) {
+
+            this.enabled = enabled;
+        }
 
         public String getDoctorUsername() {
             return doctorUsername;
