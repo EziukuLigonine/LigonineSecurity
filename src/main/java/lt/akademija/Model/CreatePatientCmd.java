@@ -11,6 +11,8 @@ public class CreatePatientCmd {
 	private String personalId;
 	private String dateOfBirth;
 	private String doctorUsername;
+	private String role = "Patient";
+	
 	public Long getId() {
 		return id;
 	}
@@ -65,5 +67,12 @@ public class CreatePatientCmd {
 	public void setDoctorUsername(String doctorUsername) {
 		this.doctorUsername = doctorUsername;
 	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
 
 }

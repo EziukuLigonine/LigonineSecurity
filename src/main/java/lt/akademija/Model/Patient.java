@@ -22,6 +22,8 @@ public class Patient extends User {
 	private String personalId;
 	private String dateOfBirth;
 	private String doctorUsername;
+	private String role = "Patient";
+	
 	public Long getId() {
 		return id;
 	}
@@ -77,6 +79,12 @@ public class Patient extends User {
 		this.doctorUsername = doctorUsername;
 	}
 	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	@Override
     public String toString() {
         return String.valueOf(id);
