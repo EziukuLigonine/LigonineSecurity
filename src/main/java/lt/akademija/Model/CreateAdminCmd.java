@@ -7,6 +7,15 @@ public class CreateAdminCmd extends CreateUserCmd {
 	private String username;
 	private String password;
 	private boolean enabled = true;
+	private String role = "Admin";
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public String getName() {
 		return name;

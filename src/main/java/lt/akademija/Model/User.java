@@ -27,15 +27,15 @@ public abstract class User {
 	private String personalId;
 	private String dateOfBirth;
 	private String doctorUsername;
-	@Column(insertable = false, updatable = false) 
-	private String dtype;
+	private String role;
 	
 	
-	public String getDtype() {
-		return dtype;
+	
+	public String getRole() {
+		return role;
 	}
-	public void setDtype(String dtype) {
-		this.dtype = dtype;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public String getDoctorUsername() {
 		return doctorUsername;

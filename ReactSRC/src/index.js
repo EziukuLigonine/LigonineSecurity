@@ -2,28 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {NavigationComponent} from "./Navigation/NavigationComponent";
-import {LoginComponent} from "./Navigation/LoginComponent";
-import {DoctorListContainer} from "./DoctorList/DoctorListContainer";
-import {DoctorContainer} from "./DoctorList/DoctorContainer";
-import {DoctorAdministrationContainer} from "./DoctorAdministration/DoctorAdministrationContainer";
-import {DoctorDetailsContainer} from "./DoctorDetails/DoctorDetailsContainer";
-import {DoctorEditComponent} from "./DoctorAdministration/DoctorEditComponent";
-import {DoctorPageComponent} from "./DoctorHomePage/DoctorPageComponent";
-
-import {PatientContainer} from "./PatientList/PatientContainer";
-import {PatientAdministrationContainer} from "./PatientAdministration/PatientAdministrationContainer";
-
-import {PharmacistContainer} from "./PharmacistList/PharmacistContainer";
-import {PharmacistAdministrationContainer} from "./PharmacistAdministration/PharmacistAdministrationContainer";
-
-import {AdminContainer} from "./AdminList/AdminContainer";
-import {AdminAdministrationContainer} from "./AdminAdministration/AdminAdministrationContainer";
-
-import {HomePageComponent} from "./HomePage/HomePageComponent";
-
-import {RecordAdministrationContainer} from "./RecordAdministration/RecordAdministrationContainer";
-
-
+import {ProductListContainer} from "./ProductList/ProductListContainer";
+import {AdminContainer} from "./AdminPanel/AdminContainer";
+import {ProductAdministrationContainer} from "./ProductAdministration/ProductAdministrationContainer";
+import {ProductDetailsContainer} from "./ProductDetails/ProductDetailsContainer";
+import CartContainer from "./Cart/CartContainer";
+import {ProductEditComponent} from "./ProductAdministration/ProductEditComponent";
+import {HomePageComponent} from "./HomePageComponent/HomePageComponent";
+import {DoctorAdministrationContainer} from "./AdminPanel/DoctorAdministration/DoctorAdministrationContainer";
+import {PatientAdministrationContainer} from "./AdminPanel/PatientAdministration/PatientAdministrationContainer";
+import {PharmacistAdministrationContainer} from "./AdminPanel/PharmacistAdministration/PharmacistAdministrationContainer";
+import {AdminAdministrationContainer} from "./AdminPanel/AdminAdministration/AdminAdministrationContainer";
+import {DoctorListContainer} from "./AdminPanel/DoctorList/DoctorListContainer";
+import {PatientListContainer} from "./AdminPanel/PatientList/PatientListContainer";
+import {PharmacistListContainer} from "./AdminPanel/PharmacistList/PharmacistListContainer";
+import {AdminListContainer} from "./AdminPanel/AdminList/AdminListContainer";
+import {DoctorContainer} from "./DoctorPanel/DoctorContainer";
+import {PrescriptionAdministrationContainer} from "./DoctorPanel/PrescriptionAdministration/PrescriptionAdministrationContainer";
+import {RecordAdministrationContainer} from "./DoctorPanel/RecordAdministration/RecordAdministrationContainer";
+import {PrescriptionListContainer} from "./DoctorPanel/PrescriptionList/PrescriptionListContainer";
+import {RecordListContainer} from "./DoctorPanel/RecordList/RecordListContainer";
 import {injector} from 'react-services-injector';
 import services from './services';
 
@@ -34,25 +32,34 @@ ReactDOM.render((
             <div className="container">
                 <NavigationComponent />
                 <Switch>
-                    <Route exact path="/" component={DoctorListContainer} />
-                    <Route exact path="/doctor" component={DoctorPageComponent} />
+                    <Route exact path="/" component={HomePageComponent} />
+                    <Route exact path="/admin" component={AdminContainer} />
 
-                    <Route exact path="/admin/" component={DoctorListContainer} />
-                    <Route exact path="/admin/doctors/:id" component={DoctorDetailsContainer} />
-                    <Route exact path="/admin/doctors" component={DoctorListContainer} />
                     <Route exact path="/admin/doctors/new" component={DoctorAdministrationContainer} />
-                    <Route exact path="/admin/doctor" component={DoctorContainer} />
+                    <Route exact path="/doctors" component={DoctorListContainer} />
 
-                   <Route exact path="/admin/patient" component={PatientContainer} />
-                   <Route exact path="/admin/patients/new" component={PatientAdministrationContainer} />
+                    <Route exact path="/admin/patients/new" component={PatientAdministrationContainer} />
+                    <Route exact path="/patients" component={PatientListContainer} />
 
-                   <Route exact path="/admin/pharmacist" component={PharmacistContainer} />
-                   <Route exact path="/admin/pharmacists/new" component={PharmacistAdministrationContainer} />
+                    <Route exact path="/admin/pharmacists/new" component={PharmacistAdministrationContainer} />
+                    <Route exact path="/pharmacists" component={PharmacistListContainer} />
 
-                     <Route exact path="/admin/admin" component={AdminContainer} />
-                     <Route exact path="/admin/admins/new" component={AdminAdministrationContainer} />
+                    <Route exact path="/admin/admins/new" component={AdminAdministrationContainer} />
+                    <Route exact path="/admins" component={AdminListContainer} />
 
-                     <Route exact path="/admin/records/new" component={RecordAdministrationContainer} />
+
+                    <Route exact path="/doctor" component={DoctorContainer} />
+                    <Route exact path="/doctor/prescriptions/new" component={PrescriptionAdministrationContainer} />
+                    <Route exact path="/doctor/records/new" component={RecordAdministrationContainer} />
+                    <Route exact path="/doctor/prescriptions" component={PrescriptionListContainer} />
+                    <Route exact path="/doctor/records" component={RecordListContainer} />
+
+                    <Route exact path="/products/:id" component={ProductDetailsContainer} />
+                    <Route exact path="/products" component={ProductListContainer} />
+                    <Route exact path="/admin/products/new" component={ProductAdministrationContainer} />
+
+                    <Route exact path="/admin/products/:id" component={ProductEditComponent} />
+                    <Route path="/cart-details" component={CartContainer} />
                 </Switch>
             </div>
         </BrowserRouter>

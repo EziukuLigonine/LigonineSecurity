@@ -21,6 +21,15 @@ public class Doctor extends User {
 	private String password;
 	private boolean enabled = true;
 	private String specialisation;
+	private String role = "Doctor";
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Long getId() {
 		return id;

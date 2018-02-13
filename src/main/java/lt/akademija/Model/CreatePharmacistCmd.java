@@ -9,7 +9,16 @@ public class CreatePharmacistCmd extends CreateUserCmd {
 	private boolean enabled = true;
 	private String companyType;
 	private String companyName;
+	private String role = "Pharmacist";
 	
+	
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public String getName() {
 		return name;
 	}

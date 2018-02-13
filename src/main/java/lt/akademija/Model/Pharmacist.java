@@ -21,6 +21,17 @@ public class Pharmacist extends User {
 	private boolean enabled = true;
 	private String companyType;
 	private String companyName;
+	private String role = "Pharmacist";
+	
+	
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Long getId() {
 		return id;

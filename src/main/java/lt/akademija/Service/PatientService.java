@@ -101,7 +101,7 @@ public class PatientService implements UserDetailsService {
 					user.getUsername(),
 					user.getPassword(),
 					AuthorityUtils.createAuthorityList(
-							new String[] { "ROLE_" + user.getDtype()}));
+							new String[] { "ROLE_" + user.getRole()}));
 	}
 	
 }

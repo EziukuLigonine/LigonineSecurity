@@ -10,6 +10,6 @@ import lt.akademija.Model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	User findByUsername(String search);
-	List<User> findByDtype(String search);
+	List<User> findByRole(String search);
 
 }
