@@ -30,20 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.authorizeRequests()
 				.antMatchers("/", "/swagger-ui.html").permitAll()
-				.antMatchers("/api/**").authenticated()
+				.antMatchers("/api/**").permitAll()
 			.and()
 				.formLogin()
-				.successHandler(new SimpleUrlAuthenticationSuccessHandler())
-				.failureHandler(new SimpleUrlAuthenticationFailureHandler())
-				.loginPage("/login").permitAll()
-			.and()
-				.logout().permitAll()
-			.and()
-				.csrf().disable()
-				.exceptionHandling()
-					.authenticationEntryPoint(securityEntryPoint)
-			.and()
-			.headers().frameOptions().disable();
+				.and()
+				.csrf().disable();
 	}
 
 }
