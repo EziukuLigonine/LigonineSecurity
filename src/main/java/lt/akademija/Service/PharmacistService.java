@@ -17,6 +17,7 @@ import lt.akademija.Repository.PharmacistRepository;
 import lt.akademija.Repository.UserRepository;
 
 @Service
+
 public class PharmacistService {
 	
 	@Autowired

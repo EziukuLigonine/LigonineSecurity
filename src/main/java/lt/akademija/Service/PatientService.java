@@ -6,10 +6,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +22,8 @@ import lt.akademija.Repository.RecordRepository;
 import lt.akademija.Repository.UserRepository;
 
 @Service
-public class PatientService implements UserDetailsService {
+
+public class PatientService {
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -48,11 +46,6 @@ public class PatientService implements UserDetailsService {
 	@Transactional
 	public User getPatient(@PathVariable String id) {
 		return userRepository.getOne(Long.parseLong(id));
-	}
-	
-	@Transactional
-	public User findByUsername(String username) {
-		return userRepository.findByUsername(username);
 	}
 	
 	@Transactional
@@ -90,18 +83,6 @@ public class PatientService implements UserDetailsService {
 	@Transactional
 	public void deletePatient(@PathVariable String id) {
 		userRepository.delete(Long.parseLong(id));
-	}
-
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = findByUsername(username);
-		if(user == null)
-			throw new UsernameNotFoundException(username + " not found.");
-			return new org.springframework.security.core.userdetails.User(
-					user.getUsername(),
-					user.getPassword(),
-					AuthorityUtils.createAuthorityList(
-							new String[] { "ROLE_" + user.getRole()}));
 	}
 	
 }

@@ -15,6 +15,7 @@ import lt.akademija.Model.Record;
 import lt.akademija.Repository.RecordRepository;
 
 @Service
+
 public class RecordService {
 	
 	@Autowired

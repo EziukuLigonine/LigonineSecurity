@@ -17,6 +17,7 @@ import lt.akademija.Repository.AdminRepository;
 import lt.akademija.Repository.UserRepository;
 
 @Service
+
 public class AdminService {
 	
 	@Autowired
