@@ -34,15 +34,15 @@ export class AdminContainer extends Component {
         return (
             <div>
               Prideti nauja vartotoja: <br/><br/>
-              <button className="btn btn-primary" onClick={this.newDoctor}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Daktaras</button>
-              <button className="btn btn-primary" onClick={this.newPatient}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pacientas</button>
-              <button className="btn btn-primary" onClick={this.newPharmacist}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Vaistininkas</button>
-              <button className="btn btn-primary" onClick={this.newAdmin}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Administratorius</button> <br/><br/>
+            <button className="btn btn-primary" onClick={this.newDoctor}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Daktaras</button>
+              <button className="btn btn-primary" onClick={this.newPatient}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Pacientas</button>
+              <button className="btn btn-primary" onClick={this.newPharmacist}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Vaistininkas</button>
+              <button className="btn btn-primary" onClick={this.newAdmin}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Administratorius</button> <br/><br/>
               Perziureti esamus vartotojus: <br/><br/>
-            <button className="btn btn-primary" onClick={this.allDoctors}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Daktarai</button>
-              <button className="btn btn-primary" onClick={this.allPatients}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pacientai</button>
-              <button className="btn btn-primary" onClick={this.allPharmacists}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Vaistininkai</button>
-              <button className="btn btn-primary" onClick={this.allAdmins}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Administratoriai</button>
+            <button className="btn btn-primary" onClick={this.allDoctors}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Daktarai</button>
+              <button className="btn btn-primary" onClick={this.allPatients}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Pacientai</button>
+              <button className="btn btn-primary" onClick={this.allPharmacists}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Vaistininkai</button>
+              <button className="btn btn-primary" onClick={this.allAdmins}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Administratoriai</button>
 
             </div>
         );

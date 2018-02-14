@@ -26,11 +26,11 @@ export class DoctorContainer extends Component {
         return (
             <div>
               Israsyti: <br/><br/>
-            <button className="btn btn-primary" onClick={this.newPrescription}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Receptas</button>
-            <button className="btn btn-primary" onClick={this.newRecord}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ligos irasas</button><br/><br/>
+            <button className="btn btn-primary" onClick={this.newPrescription}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Receptas</button>
+            <button className="btn btn-primary" onClick={this.newRecord}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Ligos irasas</button><br/><br/>
             Perziureti irasus: <br/><br/>
-          <button className="btn btn-primary" onClick={this.allPrescriptions}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Receptai</button>
-            <button className="btn btn-primary" onClick={this.allRecords}><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Ligos irasai</button>
+          <button className="btn btn-primary" onClick={this.allPrescriptions}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Receptai</button>
+            <button className="btn btn-primary" onClick={this.allRecords}><span className="glyphicon glyphicon-search" aria-hidden="true"></span> Ligos irasai</button>
             </div>
         );
     }

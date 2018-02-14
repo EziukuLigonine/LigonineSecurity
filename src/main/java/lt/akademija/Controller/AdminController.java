@@ -29,6 +29,7 @@ import lt.akademija.Service.AdminService;
 @Api(value = "Admin")
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/api")
+@PreAuthorize("hasRole('Patient')")
 public class AdminController {
 	
 	@Autowired
