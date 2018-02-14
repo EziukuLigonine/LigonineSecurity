@@ -15,6 +15,7 @@ import lt.akademija.Model.Prescription;
 import lt.akademija.Repository.PrescriptionRepository;
 
 @Service
+
 public class PrescriptionService {
 	
 	@Autowired

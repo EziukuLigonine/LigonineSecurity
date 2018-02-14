@@ -70,3 +70,4 @@ export class ProductAdministrationContainer extends React.Component {
         );
     }
 }
+

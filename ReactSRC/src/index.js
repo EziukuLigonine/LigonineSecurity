@@ -22,7 +22,6 @@ import {PrescriptionAdministrationContainer} from "./DoctorPanel/PrescriptionAdm
 import {RecordAdministrationContainer} from "./DoctorPanel/RecordAdministration/RecordAdministrationContainer";
 import {PrescriptionListContainer} from "./DoctorPanel/PrescriptionList/PrescriptionListContainer";
 import {RecordListContainer} from "./DoctorPanel/RecordList/RecordListContainer";
-import {Login} from "./Login/Login";
 import {injector} from 'react-services-injector';
 import services from './services';
 
@@ -34,33 +33,32 @@ ReactDOM.render((
                 <NavigationComponent />
                 <Switch>
                     <Route exact path="/" component={HomePageComponent} />
-                    <Route path="/admin" component={AdminContainer} />
-                    <Route path="/login" component={Login} />
+                    <Route exact path="/admin" component={AdminContainer} />
 
-                    <Route path="/admin/doctors/new" component={DoctorAdministrationContainer} />
-                    <Route path="/doctors" component={DoctorListContainer} />
+                    <Route exact path="/admin/doctors/new" component={DoctorAdministrationContainer} />
+                    <Route exact path="/doctors" component={DoctorListContainer} />
 
-                    <Route path="/admin/patients/new" component={PatientAdministrationContainer} />
-                    <Route path="/patients" component={PatientListContainer} />
+                    <Route exact path="/admin/patients/new" component={PatientAdministrationContainer} />
+                    <Route exact path="/patients" component={PatientListContainer} />
 
-                    <Route path="/admin/pharmacists/new" component={PharmacistAdministrationContainer} />
-                    <Route path="/pharmacists" component={PharmacistListContainer} />
+                    <Route exact path="/admin/pharmacists/new" component={PharmacistAdministrationContainer} />
+                    <Route exact path="/pharmacists" component={PharmacistListContainer} />
 
-                    <Route path="/admin/admins/new" component={AdminAdministrationContainer} />
-                    <Route path="/admins" component={AdminListContainer} />
+                    <Route exact path="/admin/admins/new" component={AdminAdministrationContainer} />
+                    <Route exact path="/admins" component={AdminListContainer} />
 
 
-                    <Route path="/doctor" component={DoctorContainer} />
-                    <Route path="/doctor/prescriptions/new" component={PrescriptionAdministrationContainer} />
-                    <Route path="/doctor/records/new" component={RecordAdministrationContainer} />
-                    <Route path="/doctor/prescriptions" component={PrescriptionListContainer} />
-                    <Route path="/doctor/records" component={RecordListContainer} />
+                    <Route exact path="/doctor" component={DoctorContainer} />
+                    <Route exact path="/doctor/prescriptions/new" component={PrescriptionAdministrationContainer} />
+                    <Route exact path="/doctor/records/new" component={RecordAdministrationContainer} />
+                    <Route exact path="/doctor/prescriptions" component={PrescriptionListContainer} />
+                    <Route exact path="/doctor/records" component={RecordListContainer} />
 
-                    <Route path="/products/:id" component={ProductDetailsContainer} />
-                    <Route path="/products" component={ProductListContainer} />
-                    <Route path="/admin/products/new" component={ProductAdministrationContainer} />
+                    <Route exact path="/products/:id" component={ProductDetailsContainer} />
+                    <Route exact path="/products" component={ProductListContainer} />
+                    <Route exact path="/admin/products/new" component={ProductAdministrationContainer} />
 
-                    <Route path="/admin/products/:id" component={ProductEditComponent} />
+                    <Route exact path="/admin/products/:id" component={ProductEditComponent} />
                     <Route path="/cart-details" component={CartContainer} />
                 </Switch>
             </div>

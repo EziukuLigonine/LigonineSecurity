@@ -23,6 +23,7 @@ import lt.akademija.Repository.RecordRepository;
 import lt.akademija.Repository.UserRepository;
 
 @Service
+
 public class DoctorService {
 	
 	@Autowired

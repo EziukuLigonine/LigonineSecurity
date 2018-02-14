@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -29,7 +28,6 @@ import lt.akademija.Service.AdminService;
 @Api(value = "Admin")
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/api")
-@PreAuthorize("hasRole('Patient')")
 public class AdminController {
 	
 	@Autowired
