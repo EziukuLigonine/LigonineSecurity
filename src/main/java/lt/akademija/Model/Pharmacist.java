@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -17,6 +18,7 @@ public class Pharmacist extends User {
 	private String name;
 	private String surname;
 	private String username;
+	@Size(min=6)
 	private String password;
 	private boolean enabled = true;
 	private String companyType;

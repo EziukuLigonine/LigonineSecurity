@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -14,11 +16,15 @@ public class Patient extends User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Long id;
+	@Pattern(regexp ="[A-Za-z]+")
 	private String name;
+	@Pattern(regexp ="[A-Za-z]+")
 	private String surname;
 	private String username;
+	@Size(min=6)
 	private String password;
 	private boolean enabled = true;
+	@Pattern(regexp = "[3-6]{1}[0-9]{10}")
 	private String personalId;
 	private String dateOfBirth;
 	private String doctorUsername;
