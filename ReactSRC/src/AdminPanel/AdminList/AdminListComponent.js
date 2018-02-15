@@ -33,7 +33,7 @@ export var AdminListComponent = (props) => {
                             <th>Surname</th>
                             <th>Username</th>
                             <th>Password</th>
-                            <th>Delete</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

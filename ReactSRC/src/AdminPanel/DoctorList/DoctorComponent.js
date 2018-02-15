@@ -2,7 +2,12 @@ import React from 'react';
 import axios from 'axios';
 
 const styles = {
-  color: 'red'
+  color: 'red',
+  padding: '5px'
+}
+const green = {
+  color: 'green',
+  padding: '5px'
 }
 
 export var DoctorComponent = (props) => {
@@ -36,9 +41,11 @@ export var DoctorComponent = (props) => {
         <td>{username}</td>
         <td>{password}</td>
         <td>{specialisation}</td>
-          <td><button className="btn btn-primary" onClick={handleClick}>Edit</button></td>
-          <td><button className="btn btn-primary" onClick={this.getDoctor}>Details</button></td>
-        <td><span id={id} className="glyphicon glyphicon-remove" style={styles} onClick={handleRemove}></span></td>
+          <td>
+            <span id={id} className="glyphicon glyphicon-wrench" aria-hidden="true" style={green} onClick={handleClick}></span>
+            <span id={id} className="glyphicon glyphicon-eye-open" aria-hidden="true" style={green} onClick={getDoctor}></span>
+            <span id={id} className="glyphicon glyphicon-trash" aria-hidden="true" style={styles} onClick={handleRemove}></span>
+            </td>
       </tr>
   );
 

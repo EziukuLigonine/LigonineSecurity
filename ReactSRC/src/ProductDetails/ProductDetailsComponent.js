@@ -44,7 +44,7 @@ class ProductDetailsComponent extends React.Component {
             </div>
         );
     }
-    
+
 };
 
 export default injector.connect(ProductDetailsComponent);

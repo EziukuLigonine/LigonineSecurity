@@ -37,7 +37,7 @@ export var PharmacistListComponent = (props) => {
                             <th>Password</th>
                             <th>Company Type</th>
                             <th>Company Name</th>
-                            <th>Delete</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

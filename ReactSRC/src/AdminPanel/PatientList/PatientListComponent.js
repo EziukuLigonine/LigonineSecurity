@@ -39,7 +39,7 @@ export var PatientListComponent = (props) => {
                             <th>Personal ID</th>
                             <th>Date of Birth</th>
                             <th>Doctors Username</th>
-                            <th>Delete</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

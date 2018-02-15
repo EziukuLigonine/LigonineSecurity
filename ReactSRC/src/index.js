@@ -22,6 +22,10 @@ import {PrescriptionAdministrationContainer} from "./DoctorPanel/PrescriptionAdm
 import {RecordAdministrationContainer} from "./DoctorPanel/RecordAdministration/RecordAdministrationContainer";
 import {PrescriptionListContainer} from "./DoctorPanel/PrescriptionList/PrescriptionListContainer";
 import {RecordListContainer} from "./DoctorPanel/RecordList/RecordListContainer";
+import {PatientDetailsContainer} from "./AdminPanel/PatientDetails/PatientDetailsContainer";
+import {AdminDetailsContainer} from "./AdminPanel/AdminDetails/AdminDetailsContainer";
+import {DoctorDetailsContainer} from "./AdminPanel/DoctorDetails/DoctorDetailsContainer";
+import {PharmacistDetailsContainer} from "./AdminPanel/PharmacistDetails/PharmacistDetailsContainer";
 import {injector} from 'react-services-injector';
 import services from './services';
 
@@ -37,15 +41,19 @@ ReactDOM.render((
 
                     <Route exact path="/admin/doctors/new" component={DoctorAdministrationContainer} />
                     <Route exact path="/doctors" component={DoctorListContainer} />
+                    <Route exact path="/doctors/:id" component={DoctorDetailsContainer} />
 
                     <Route exact path="/admin/patients/new" component={PatientAdministrationContainer} />
                     <Route exact path="/patients" component={PatientListContainer} />
+                    <Route exact path="/patients/:id" component={PatientDetailsContainer} />
 
                     <Route exact path="/admin/pharmacists/new" component={PharmacistAdministrationContainer} />
                     <Route exact path="/pharmacists" component={PharmacistListContainer} />
+                    <Route exact path="/pharmacists/:id" component={PharmacistDetailsContainer} />
 
                     <Route exact path="/admin/admins/new" component={AdminAdministrationContainer} />
                     <Route exact path="/admins" component={AdminListContainer} />
+                    <Route exact path="/admins/:id" component={AdminDetailsContainer} />
 
 
                     <Route exact path="/doctor" component={DoctorContainer} />

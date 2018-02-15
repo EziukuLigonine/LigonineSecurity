@@ -35,7 +35,7 @@ export var DoctorListComponent = (props) => {
                             <th>Username</th>
                             <th>Password</th>
                             <th>Specialisation</th>
-                            <th>Delete</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
