@@ -26,6 +26,8 @@ import {PatientDetailsContainer} from "./AdminPanel/PatientDetails/PatientDetail
 import {AdminDetailsContainer} from "./AdminPanel/AdminDetails/AdminDetailsContainer";
 import {DoctorDetailsContainer} from "./AdminPanel/DoctorDetails/DoctorDetailsContainer";
 import {PharmacistDetailsContainer} from "./AdminPanel/PharmacistDetails/PharmacistDetailsContainer";
+import {PrescriptionDetailsContainer} from "./DoctorPanel/PrescriptionDetails/PrescriptionDetailsContainer";
+import {RecordDetailsContainer} from "./DoctorPanel/RecordDetails/RecordDetailsContainer";
 import {injector} from 'react-services-injector';
 import services from './services';
 
@@ -61,6 +63,8 @@ ReactDOM.render((
                     <Route exact path="/doctor/records/new" component={RecordAdministrationContainer} />
                     <Route exact path="/doctor/prescriptions" component={PrescriptionListContainer} />
                     <Route exact path="/doctor/records" component={RecordListContainer} />
+                    <Route exact path="/prescriptions/:id" component={PrescriptionDetailsContainer} />
+                    <Route exact path="/records/:id" component={RecordDetailsContainer} />
 
                     <Route exact path="/products/:id" component={ProductDetailsContainer} />
                     <Route exact path="/products" component={ProductListContainer} />
