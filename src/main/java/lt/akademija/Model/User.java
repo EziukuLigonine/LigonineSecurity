@@ -1,5 +1,7 @@
 package lt.akademija.Model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -11,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public abstract class User {
+public abstract class User implements Serializable {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.TABLE)
