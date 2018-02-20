@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {API} from '../ApiUrl';
 import axios from 'axios';
-import RegisterDoctorComponent from './RegisterDoctorComponent';
+import RegisterPharmacistComponent from './RegisterPharmacistComponent';
 
-class RegisterDoctor extends Component {
+class RegisterPharmacist extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,8 @@ class RegisterDoctor extends Component {
       surname: '',
       username: '',
       password: '',
-      specialisation: '',
+      companyType: '',
+      companyName: '',
       history: props.history
     }
   }
@@ -19,7 +20,7 @@ class RegisterDoctor extends Component {
   handleChange = (event) => {
     const target = event.target;
     const value = target.value;
-    const id = target.id; // iš input tag'o gaunam būsenos objekto raktą reikšmei nustatyti
+    const id = target.id;
     this.setState({
       [id]: value
     }
@@ -27,22 +28,24 @@ class RegisterDoctor extends Component {
 };
 
 handleClick = (event) => {
-  const outputDoctor = {
+  const outputPharmacist = {
     name: this.state.name,
     surname: this.state.surname,
     username: this.state.username,
     password: this.state.password,
-    specialisation: this.state.specialisation
+    companyType: this.state.companyType,
+    companyName: this.state.companyName
   };
 
-  axios.post(API + "/api/admin/doctors/new", outputDoctor)
+  axios.post(API + "/api/admin/pharmacists/new", outputPharmacist)
   .then((response) => {
     this.setState( {
       name: '',
       surname: '',
       username: '',
       password: '',
-      specialisation: ''
+      companyType: '',
+      companyName: ''
     });
   })
   .catch((error) => {
@@ -53,19 +56,20 @@ handleClick = (event) => {
 render(){
   return(
     <div>
-      <RegisterDoctorComponent
-        name={this.state.name}
-        surname={this.state.surname}
-        username={this.state.username}
-        password={this.state.password}
-        specialisation={this.state.specialisation}
-        onChange={this.handleChange}
-        onClick={this.handleClick}
-        history={this.state.history}
-        />
+    <RegisterPharmacistComponent
+    name={this.state.name}
+    surname={this.state.surname}
+    username={this.state.username}
+    password={this.state.password}
+    companyType={this.state.companyType}
+    companyName={this.state.companyName}
+    onChange={this.handleChange}
+    onClick={this.handleClick}
+    history={this.state.history}
+    />
     </div>
   );
 }
 }
 
-export default RegisterDoctor;
+export default RegisterPharmacist;

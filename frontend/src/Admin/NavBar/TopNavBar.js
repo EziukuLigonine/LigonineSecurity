@@ -12,17 +12,17 @@ class TopNavBar extends Component {
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meniu <span className="caret"></span></a>
                 <ul className="dropdown-menu">
-                  <li><Link to="/admin/register/admin"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Administratorius</Link></li>
-                  <li><Link to="/admin/register/doctor"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Gydytojas</Link></li>
-                  <li><Link to="/admin/register/patient"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Pacientas</Link></li>
-                  <li><Link to="/admin/register/pharmacist"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Vaistininkas</Link></li>
+                  <li><Link to="/admin/register/admin"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Administratorius</Link></li>
+                  <li><Link to="/admin/register/doctor"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Gydytojas</Link></li>
+                  <li><Link to="/admin/register/patient"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Pacientas</Link></li>
+                  <li><Link to="/admin/register/pharmacist"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Vaistininkas</Link></li>
                   <li role="separator" className="divider"></li>
-                  <li><Link to="admin/assign"><span class="glyphicon glyphicon-random" aria-hidden="true"></span> Paciento priskirimas</Link></li>
+                  <li><Link to="admin/assign"><span className="glyphicon glyphicon-random" aria-hidden="true"></span> Paciento priskirimas</Link></li>
                   <li role="separator" className="divider"></li>
-                  <li><Link to="/admin/admins"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Administratorių sąrašas</Link></li>
-                  <li><Link to="/admin/patients"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Pacientų sąrašas</Link></li>
-                  <li><Link to="/admin/doctors"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Gydytojų sąrašas</Link></li>
-                  <li><Link to="/admin/pharmacists"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Vaistininkų sąrašas</Link></li>
+                  <li><Link to="/admin/admins"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Administratorių sąrašas</Link></li>
+                  <li><Link to="/admin/patients"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Pacientų sąrašas</Link></li>
+                  <li><Link to="/admin/doctors"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Gydytojų sąrašas</Link></li>
+                  <li><Link to="/admin/pharmacists"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Vaistininkų sąrašas</Link></li>
                 </ul>
               </li>
             </ul>

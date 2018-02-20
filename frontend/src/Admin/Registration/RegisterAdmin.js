@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {API} from './ApiUrl';
+import {API} from '../ApiUrl';
 import axios from 'axios';
 import RegisterAdminComponent from './RegisterAdminComponent';
 
@@ -33,7 +33,7 @@ handleClick = (event) => {
     password: this.state.password
   };
 
-  axios.post(API + "/admin/register/admin", outputAdmin)
+  axios.post(API + "/api/admin/admins/new", outputAdmin)
   .then((response) => {
     this.setState( {
       name: '',
